@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace trader
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for RegisterPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RegisterPage : Page
     {
-        public MainWindow()
+        public RegisterPage()
         {
             InitializeComponent();
-            StartWindow.Navigate(new RegisterPage());
         }
     }
 }
