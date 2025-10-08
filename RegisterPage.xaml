@@ -114,7 +114,8 @@
                 VerticalAlignment="Center"
                 Width="120"
                 Background="LightSteelBlue"
-                HorizontalAlignment="left"
+                HorizontalAlignment="left" 
+                Click="RegButton_Click"
         />
         </StackPanel>
     </Grid>
