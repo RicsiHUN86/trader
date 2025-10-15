@@ -50,3 +50,5 @@ C:\Users\barnari\source\repos\trader\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\barnari\source\repos\trader\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\barnari\source\repos\trader\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\barnari\source\repos\trader\obj\Debug\trader.csproj.Up2Date
+C:\Users\barnari\source\repos\trader\obj\Debug\LoginPage.g.cs
+C:\Users\barnari\source\repos\trader\obj\Debug\LoginPage.baml
