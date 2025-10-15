@@ -42,5 +42,23 @@ namespace trader
                 return new { message = ex.Message };
             }
         }
+        public object loginuser(object user)
+        {
+            conn._connection.Open();
+            string sql = "SELECT * FROM `users` WHERE UserName=@username AND PASSWORD=@password";
+            MySqlCommand cmd = new MySqlCommand(sql, conn._connection);
+
+            var Loguser = user.GetType().GetProperties();
+
+            cmd.Parameters.AddWithValue("@username", Loguser[0].GetValue(user));
+            cmd.Parameters.AddWithValue("@password", Loguser[1].GetValue(user));
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            object isRegistered = reader.Read() ? new { message = "Regisztrált" } : new { message = "Nem regisztrált" };
+
+            conn._connection.Close();
+            return isRegistered;
+        }
     }
 }
