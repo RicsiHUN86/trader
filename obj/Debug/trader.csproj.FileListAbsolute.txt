@@ -52,3 +52,5 @@ C:\Users\barnari\source\repos\trader\bin\Debug\System.Threading.Tasks.Extensions
 C:\Users\barnari\source\repos\trader\obj\Debug\trader.csproj.Up2Date
 C:\Users\barnari\source\repos\trader\obj\Debug\LoginPage.g.cs
 C:\Users\barnari\source\repos\trader\obj\Debug\LoginPage.baml
+C:\Users\barnari\source\repos\trader\obj\Debug\AdminPage.g.cs
+C:\Users\barnari\source\repos\trader\obj\Debug\AdminPage.baml

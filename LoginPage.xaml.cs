@@ -37,7 +37,7 @@ namespace trader
             };
             MessageBox.Show(_dataBaseStatemans.loginuser(user).ToString());
         }
-        private void Reglink_Click(object sender, RoutedEventArgs e)
+        private void RegLink_click(object sender, RoutedEventArgs e)
         {
             _mainWindow.StartWindow.Navigate(new RegisterPage(_mainWindow));
         }
