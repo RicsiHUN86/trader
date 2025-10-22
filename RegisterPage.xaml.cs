@@ -21,9 +21,11 @@ namespace trader
     public partial class RegisterPage : Page
     {
         private readonly DataBaseStatemans db = new DataBaseStatemans();
-        public RegisterPage()
+        private readonly MainWindow _mainWindow;
+        public RegisterPage(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
         }
 
         private void RegButton_Click(object sender, RoutedEventArgs e)
@@ -41,6 +43,7 @@ namespace trader
                     email = EmailTextBox.Text
                 };
                 MessageBox.Show(db.AddNewUser(user).ToString());
+                _mainWindow.StartWindow.Navigate(new Login(_mainWindow));
             }
             else
             {

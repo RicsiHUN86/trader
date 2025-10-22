@@ -16,30 +16,17 @@ using System.Windows.Shapes;
 namespace trader
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for AdminPage.xaml
     /// </summary>
-    public partial class Login : Page
+    public partial class AdminPage : Page
     {
         private readonly DataBaseStatemans _dataBaseStatemans = new DataBaseStatemans();
         private readonly MainWindow _mainWindow;
-        public Login(MainWindow mainWindow)
+        public AdminPage(MainWindow mainWindow)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            var user = new
-            {
-                username = UsernameTextBox.Text,
-                password = PasswordBox.Password
-            };
-            MessageBox.Show(_dataBaseStatemans.loginuser(user).ToString());
-        }
-        private void Reglink_Click(object sender, RoutedEventArgs e)
-        {
-            _mainWindow.StartWindow.Navigate(new RegisterPage(_mainWindow));
+            UserDataGrid.ItemsSource = new object[] { };
         }
     }
 }

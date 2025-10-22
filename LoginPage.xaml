@@ -58,6 +58,13 @@
         
         
         <StackPanel Grid.Row="5" Grid.Column="1">
+            <TextBlock>
+                <Hyperlink x:Name="RegisterLink"
+                    FontSize="16"
+                    Foreground="Blue"
+                    FontWeight="Bold"
+                    Click="RegLink_click">Regisztrálok</Hyperlink>
+            </TextBlock>
             <Button Content="Bejelentkezés"
              FontSize="20"
              FontWeight="Bold"
