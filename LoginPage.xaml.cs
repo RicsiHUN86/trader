@@ -35,8 +35,12 @@ namespace trader
                 username = UsernameTextBox.Text,
                 password = PasswordBox.Password
             };
-            MessageBox.Show(_dataBaseStatemans.loginuser(user).ToString());
+            if (_dataBaseStatemans.Loginuser(user))
+                _mainWindow.StartWindow.Navigate(new AdminPage(_mainWindow));
+            else
+                MessageBox.Show("Még nem regisztrált");
         }
+
         private void RegLink_click(object sender, RoutedEventArgs e)
         {
             _mainWindow.StartWindow.Navigate(new RegisterPage(_mainWindow));
