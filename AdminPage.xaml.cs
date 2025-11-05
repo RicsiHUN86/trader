@@ -28,5 +28,20 @@ namespace trader
             _mainWindow = mainWindow;
             userDataGrid.ItemsSource = _dataBaseStatemans.userlist();
         }
+
+        private void deleteUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            var id = idTextBox.Text;
+
+            var userId = new
+            {
+                Id = id
+            };
+
+            _dataBaseStatemans.deleteuser(userId);
+
+            MessageBox.Show("Felhasználó törölve");
+
+        }
     }
 }

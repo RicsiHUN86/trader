@@ -9,8 +9,15 @@
       Title="AdminPage">
 
     <Grid Margin="50">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="144*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="idTextBox" Margin="70,21,547,10">ID</TextBox>
+        <Button x:Name="deleteUserButton" Content="törlése" Width="120" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="510,18,0,0" Click="deleteUserButton_Click"/>
         <DataGrid
-            x:Name="userDataGrid"
+            x:Name="userDataGrid" Margin="70,48,70,72" Grid.RowSpan="2"
             />
     </Grid>
 </Page>

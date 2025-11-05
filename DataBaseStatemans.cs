@@ -105,18 +105,23 @@ namespace trader
         }
 
         public object deleteuser(object id)
-        {   try
+        {
+            try
             {
                 conn._connection.Open();
-                string sql = "DELETE FROM `users` WHERE UserName = @username";
+
+                string sql = "DELETE FROM `users` WHERE Id = @id";
                 MySqlCommand cmd = new MySqlCommand(sql, conn._connection);
-                cmd.Parameters.AddWithValue("@username", id);
+
+                cmd.Parameters.AddWithValue("@id", id);
                 cmd.ExecuteNonQuery();
+
                 conn._connection.Close();
                 return new { message = "Sikeres törlés" };
             }
             catch (Exception ex)
             {
+                conn._connection.Close();
                 return new { message = ex.Message };
             }
 
